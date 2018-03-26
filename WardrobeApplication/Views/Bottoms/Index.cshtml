@@ -1,0 +1,26 @@
+﻿@model IEnumerable<WardrobeApplication.Models.Bottom>
+
+@{
+    ViewBag.Title = "Index";
+}
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@foreach (var item in Model)
+{
+
+    <div class="col-lg-12 card-2">
+        <h2> @Html.DisplayFor(modelItem => item.BottomName)</h2>
+        <img src="@Html.DisplayFor(modelItem => item.Photo)" alt="Avatar" style="width:350px" height="450">
+        <div class="container">
+            <h3><b> @Html.DisplayFor(modelItem => item.Occasion)</b></h3>
+            <p>
+                @Html.ActionLink("Edit", "Edit", new { id = item.BottomID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.BottomID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.BottomID })
+            </p>
+        </div>
+    </div>
+
+}

@@ -1,0 +1,31 @@
+﻿@model IEnumerable<WardrobeApplication.Models.Sho>
+
+@{
+    ViewBag.Title = "Index";
+}
+<script src="~/Content/JavaScript.js"></script>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="col-lg-4 shoe-img">
+    <img src="~/Content/ImgFolder/Shoe2.gif" width="275" height="500" />
+    </div>
+    @foreach (var item in Model)
+    {
+
+        <div class="col-md-2 card-3">
+            <h4 onmouseover="myFunction(this, 'red')"onmouseout="mOut(this)"id="colorJS" > @Html.DisplayFor(modelItem => item.ShoesName)</h4>
+            <img src="@Html.DisplayFor(modelItem => item.Photo)" alt="Avatar" style="width:225px" height="200">
+            <div class="container">
+
+                <p>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ShoesID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ShoesID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ShoesID })
+                </p>
+            </div>
+        </div>
+
+    }
+
+
