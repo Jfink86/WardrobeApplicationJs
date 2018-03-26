@@ -3,57 +3,11 @@
 @{
     ViewBag.Title = "Index";
 }
-<body onafterprint="myFunction5()">
-    <h1>Try to print this document</h1>
-    <p><b>Tip:</b> Keyboard shortcuts, such as Ctrl+P sets the page to print.</p>
 
 
     <h2>Index</h2>
-    <div class="row locationsrowodd" id="orig">
-        <div class="col-7 locationscolodd">
-            <p class="locheader">Location #1</p>
-            <p>The obvious idea is to start this article off with a description of lorem ipsum and where it came from, but as designers we pretty much all get the idea: it’s filler text. Perhaps a more relevant topic of discussion is whether or not you should ever really use lorem ipsum in your work.</p>
-            <button type="button" class="btn" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="SwapDivsWithClick('orig','swap')">Reserve Now!</button>
-
-            <!--<button type="button" class="btn" onmouseover="overBtn(this)" onmouseout="outBtn(this)">Reserve Now!</button>-->
-        </div>
-        <div class="col-5 locationscolodd">
-
-        </div>
-    </div>
-    <div class="row locationsrowodd" style="display:none" id="swap">
-        <div class="col-7 locationscolodd">
-            <h2>Please login or join to reserve a site</h2>
-            <form action="/action_page.php">
-                First name:<br>
-                <input type="text" name="firstname" value="Mickey">
-                <br>
-                Last name:<br>
-                <input type="text" name="lastname" value="Mouse">
-                <br><br>
-                <!--<button type="button" class="btn" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="SwapDivsWithClick('orig','swap')">Submit</button>-->
-                <button type="button" class="btn" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="SwapDivsWithClick('orig', 'swap'); Redirect();">Submit</button>
-                <output name="result" id="confirmResponse"></output>
-
-            </form>
-        </div>
-    </div>
-    <div class="col-4 square bg text" id="villachoice">
-        <div class="content">
-
-            <p class="lochead">A VILLA FOR EVERY ACCASION </p>
-            <p class="locp">Lorem ipsum dolor amet food truck small batch photo booth mlkshk, PBR&B af swag artisan aesthetic affogato. Pitchfork tousled sartorial, vexillologist small batch adaptogen put a bird on it literally aesthetic. Iceland pitchfork intelligentsia palo santo lumbersexual pug fanny pack. </p>
-            <input id="buttonloc" type="submit" value="Return" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="GetVilla();SwapDivsWithClick('villachoice', 'villaswap');">
-
-        </div>
-    </div>
-    <div class="col-4 square bg text" id="villaswap" style="display:none">
-        <div class="content">
-            <p class="lochead">Available Villas</p>
-            <p class="locp" id="villout"></p>
-            <input id="buttonloc" type="submit" value="Return" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="SwapDivsWithClick('villachoice', 'villaswap');">
-        </div>
-    </div>
+    
+   
     <p>The sort() method sorts an array alphabetically.</p>
 
     <button onclick="myFunction3()">Try it</button>
@@ -110,4 +64,3 @@
         }
 
     </table>
-</body>

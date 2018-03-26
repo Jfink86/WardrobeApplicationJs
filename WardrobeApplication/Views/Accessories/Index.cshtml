@@ -6,32 +6,60 @@
 
 
 
-   
-
-<div class="row">
-    <img src="~/Content/ImgFolder/Watch3.jpg" width="1200" height="275" />
-</div>
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+<div class="row">
+    <img src="~/Content/ImgFolder/Watch3.jpg" width="1200" height="250" />
+</div>
+
+<div class="row " id="orig">
+  
+    <p>Click Below To Order Items </p>
+    <button type="button" class="btn" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="SwapDivsWithClick('orig','swap')">Order Now!</button>
+   
+
+</div>
+<div class="row " style="display:none" id="swap">
+   
+    <h2>Log-in to create an account using Amazon Pay  .</h2>
+    <form action="/action_page.php">
+        First name:<br>
+        <input type="text" name="firstname" value="">
+        <br>
+        Last name:<br>
+        <input type="text" name="lastname" value="">
+        <br><br>
+
+        <button type="button" class="btn" onmouseover="overBtn(this)" onmouseout="outBtn(this)" onclick="SwapDivsWithClick('orig', 'swap'); Redirect();">Submit</button>
+        <output name="result" id="confirmResponse"></output>
+
+    </form>
+</div>
+
+
 <h1><b>Accessories</b></h1>
 @foreach (var item in Model)
- {
+{
 
     <div class="col-md-4 ">
         <h4> @Html.DisplayFor(modelItem => item.AccessoryName)</h4>
         <img src="@Html.DisplayFor(modelItem => item.Photo)" alt="Avatar" style="width:275px" height="300">
-        <div class="container">
 
-            <p>
-                @Html.ActionLink("Edit", "Edit", new { id = item.AccessoryID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.AccessoryID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.AccessoryID })
-            </p>
-        </div>
+
+
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = item.AccessoryID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.AccessoryID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.AccessoryID })
+        </p>
     </div>
+    @*</div>*@
 
- }
+}
+
+
 <div class="col-sm-12">
     <img src="~/Content/ImgFolder/Watches.gif" height="275" width="1000" />
 </div>

@@ -4,15 +4,15 @@ function myFunction(elmnt, clr) {
     elmnt.style.color = clr;
 }
 function mOut(obj) {
-    obj.innerHTML = "Mouse Over Me";
+    obj.innerHTML = "ON-SALE TODAY ONLY";
 }
 
 //User Add content JS Function
 
 function Greeting() {
     var x = document.getElementById("greeting");
-    var userResponse = prompt('Welcome to my Wardrobe Application. What is your name?');
-    x.innerText = 'Wecome To My Wardrobe App ' + userResponse;
+    var userResponse = prompt('Welcome to my SuperDope Wardrobe App. Please enter your name to sign-in.');
+    x.innerText = "Hello " + userResponse + ', WELCOME to my SuPerDoPe WaRDroBe APP ';
 }
 
 //Copyright hover JS function
@@ -38,7 +38,7 @@ function myFunction3() {
 //user inhance size and color of text and return to default JS functions
 
 function overBtn(x) {
-    x.style.backgroundColor = "black"
+    x.style.backgroundColor = "black";
     x.style.color = "white";
     x.style.fontSize = "24px";
 }
@@ -52,9 +52,9 @@ function outBtn(x) {
 function SwapDivsWithClick(div1, div2) {
     d1 = document.getElementById(div1);
     d2 = document.getElementById(div2);
-    if (d2.style.display == "none") {
+    if (d2.style.display === "none") {
         d1.style.display = "none";
-        d2.style.display = "flex"
+        d2.style.display = "flex";
     }
     else {
         d1.style.display = "flex";
@@ -67,19 +67,19 @@ function Redirect(x) {
     var userResponse = confirm('You are about to leave this site. If you want to stay, please select cancel.');
     var displayContainer = document.getElementById('confirmResponse');
     var displayMessage = '';
-    var alert = (userResponse)
+    var alert = "userResponse";
     if (userResponse) {
-        var win = window.open("https://www.tuscanyaccommodation.com/tuscany-villas/?gclid=EAIaIQobChMIlcqH3bzi2QIVDEwNCh1Xbg9DEAAYAyAAEgLW1vD_BwE", '_blank');
+        var win = window.open("https://pay.amazon.com/us/merchant", '_blank');
         win.focus();
     }
 }
 
 function GetVilla() {
     var villaArray = new Array(0);
-    var userResponse = confirm('Would you like to check the availability of a Villa?');
+    var userResponse = confirm('Click "OK" to availability of an Item?');
     while (userResponse) {
-        var villa = prompt('Please enter the name of a villa');
-        userResponse = confirm('Would you like to add another Villa?');
+        var villa = prompt('Enter the Name of any Item');
+        userResponse = confirm('Click "OK" to check Availability another Item');
         villaArray.push(villa);
     }
     var d = new Date();
@@ -94,12 +94,12 @@ function GetVilla() {
     } else if (m > 9 && m < 13) {
         x.getElementsByTagName('p')[1].innerText = villaArray[3];
     } else {
-        x.getElementsByTagName('p')[1].innerText = 'Sorry we have no villas available';
+        x.getElementsByTagName('p')[1].innerText = 'Sorry this item is not available';
     }
 }
-
+//Homework JSFunction
 function myFunction5() {
-    alert("This document is now being printed");
+    alert("Thank you for using my wardrobe Application. This document will be printed next time you connect to your local printer");
 }
 
 

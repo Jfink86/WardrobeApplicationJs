@@ -4,17 +4,18 @@
     ViewBag.Title = "Index";
 }
 <script src="~/Content/JavaScript.js"></script>
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<div class="col-lg-4 shoe-img">
-    <img src="~/Content/ImgFolder/Shoe2.gif" width="275" height="500" />
+<body onafterprint="myFunction5()">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <div class="col-lg-4 shoe-img">
+        <img src="~/Content/ImgFolder/Shoe2.gif" width="275" height="500" />
     </div>
     @foreach (var item in Model)
     {
 
         <div class="col-md-2 card-3">
-            <h4 onmouseover="myFunction(this, 'red')"onmouseout="mOut(this)"id="colorJS" > @Html.DisplayFor(modelItem => item.ShoesName)</h4>
+            <h4 onmouseover="myFunction(this, 'red')" onmouseout="mOut(this)" id="colorJS"> @Html.DisplayFor(modelItem => item.ShoesName)</h4>
             <img src="@Html.DisplayFor(modelItem => item.Photo)" alt="Avatar" style="width:225px" height="200">
             <div class="container">
 
@@ -27,5 +28,6 @@
         </div>
 
     }
-
-
+    <h1> Print this Page</h1>
+    <p><b>Tip:</b> Keyboard shortcuts, such as Ctrl+P sets the page to print.</p>
+</body>
